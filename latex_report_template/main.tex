@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\author{
+  Author 1\\
+  \textnormal{author 1 info}
+  \and
+  Author 2\\
+  \textnormal{author 2 info}
+  \and
+  Author 3\\
+  \textnormal{author 3 info}
+}
+\title{Report Title}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{graphicx}
+
+\usepackage{multirow}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst} % indent every paragraph following each section title
+
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{url}
+\usepackage[nottoc,numbib]{tocbibind}
+
+\usepackage[hang,flushmargin]{footmisc} % no footnote indentation
+
+\begin{document}
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\input{introduction}
+\input{sec_1}
+\input{sec_2}
+\input{sec_3}
+\input{conclusion}
+\bibliography{reference}
+\bibliographystyle{IEEEtran}
+\end{document}
